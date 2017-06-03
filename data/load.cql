@@ -30,7 +30,7 @@ match (t:Trip)
 match (s:Stop {tripId: t.id, sequence: 1})
 merge (t)-[:STARTS_AT]->(s);
 
-USING PERIODIC COMMIT 100
+USING PERIODIC COMMIT 1
 LOAD CSV WITH HEADERS FROM "file:///stop_times.csv" AS row
 WITH toInteger(row.stop_sequence) AS seq, row
 match (s1:Stop {tripId: row.trip_id, sequence: seq})
