@@ -1,5 +1,5 @@
 FROM neo4j:3.2
-ADD neo4j.conf /var/lib/neo4j/conf/neo4j.conf
+ADD neo4j.conf /var/lib/neo4j/conf/
 ADD data /var/lib/neo4j/import
 ENV NEO4J_CACHE_MEMORY=6G \
     NEO4J_HEAP_MEMORY=6G \
