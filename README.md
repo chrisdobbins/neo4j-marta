@@ -1,1 +1,4 @@
-# neo4j-marta
+# neo4j-marta-reborn
+12/2020: I decided to revisit this project anew. There's no real point other than trying to learn more about graph databases and possibly make something that makes getting around by bus somewhat less onerous.
+
+The inspiration for this project was my frustration with the limitations of transit directions via bus on Google Maps. Often, I found that some ways to arrive at a given point wouldn't show up in the directions. For example, to get to Five Points station from River Rd. in Clayton County, one can take the 15 and transfer to the 186 near South Dekalb Mall. Oftentimes, however, the only directions that would be shown as an option would be to take the 15 to the Decatur train station, then take the train to Five Points. Most times, that would be sufficient, but on the weekends that MARTA does single tracking, it can be a bit faster and more predictable to get there via bus since no transit apps account for the schedule change in determining the best way to get somewhere. I may add a web app that shows the closest buses to one's current location along with where they are headed.
