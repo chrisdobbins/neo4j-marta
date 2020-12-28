@@ -8,10 +8,10 @@ This is designed to be straightforward to use. If there are improvements that co
 
 The following is assumed:
 - Neo4j is installed and you have sufficient permissions to install/use [APOC](https://neo4j.com/labs/apoc/).
-- PostgreSQL is installed.
+- PostgreSQL and PostGIS are installed.
 
 ### Things to note:
-- Postgres was primarily used to get the data needed to create the Neo4j nodes and relationships. That data currently resides in `neo4j-import/routes-and-trips.csv`, `neo4j-import/routes-and-stops.csv`, and `neo4j-import/stops.csv`.
+- Postgres was primarily used to get the data into a form that makes it easier to create the Neo4j nodes and relationships. That data currently resides in `neo4j-import/routes-and-trips.csv`, `neo4j-import/routes-and-stops.csv`, and `neo4j-import/stops.csv`. The secondary purpose is finding the N closest stops to a given point. For now, N=10.
 To re-generate `routes-and-trips.csv` and `routes-and-stops.csv`, first run `postgres-queries/create-tables.sql`, then run `postgres-queries/create-csv-files.sql`. `stops.csv` is the same as `stops.txt` in the `source-data` directory.
 - To import data into Neo4j: 
   1. Copy the files in `neo4j-import/` to `$NEO4J_HOME/import/`. 
